@@ -1,0 +1,20 @@
+// define searchable fields, with option for LIKE|EQUAL (TRUE|FALSE)
+$fields = [
+  'name' => TRUE,
+  'country' => TRUE,
+  'address' => TRUE,
+  'gender' => FALSE,
+  'state' => FALSE
+];
+foreach ($fields as $field => $like) {
+  if (isset($_GET[$field]) AND !empty($_GET['$field'])) {
+    $value = $_GET[$field];
+    // prepare WHERE condition item, depending on LIKE option
+    $search[] = $field . (
+      $like ? ('LIKE "%' . $value . '%"') : ('="' . $value . '"')
+    );
+  }
+}
+if ($search) {
+  $sql = 'SELECT * FROM student WHERE ' . implode(' AND ' . $search);
+}

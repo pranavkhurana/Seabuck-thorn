@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Seabuck Thorn | Blast</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://getbootstrap.com.vn/examples/equal-height-columns/equal-height-columns.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+div.media-left.media-middle{
+	background-color: rgb(248, 248, 248);
+}
+.beforenav{
+	color:white;
+	text-align: center;
+	background-image: url("sea-buckthorn.jpg");
+	background-size: cover;
+	background-position-y:507px;
+}
+.topic{
+	margin-right: 50px;
+	text-align:right;
+	padding: 5px;
+}
+.transbox{
+	background: rgba(0,0,0, 0.75)
+}
+[class*="col-"]{
+	border:none;
+	background-color: white;
+	padding-top: 0px;
+	padding-bottom:0px;
+}
+.navbar-nav>li>a{
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.nav>li {
+    padding-left:10px;
+}
+.data{
+    border: 1px dotted #ca4342;;
+}
+.bodyhead{
+	    color: #ca4342;
+}
+.paddingadd{
+	padding:10px;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 2px;
+    border-top: 0px solid #ddd;
+}
+p{
+	font-size:16px;
+}
+.fontnmargin{
+	margin-top: 8%;
+	font-family:monospace;
+}
+.citation{
+	background-color: rgba(251, 175, 175, 0.1);
+	color: rgb(199, 49, 52);
+}
+.footer {
+    padding: 10px;
+    background-color: #f8f8f8;
+    text-align: start;
+    font-size: small;
+    color: rgba(0, 0, 0, 0.42);
+    font-weight: 700;
+}
+</style>
+<body>
+
+<!-- page top -->
+  <div class="media">
+    <div class="media-left media-middle">
+      <img src="ggsipu-logo.png" class="media-object" style="width:150px">
+    </div>
+    <div class="media-body beforenav">
+    	<div class="transbox">
+   			<h3 class="topic">SeaBuckThornMiSatDB</h3>
+			<h4>University School of Biotechnology</h4>
+			<h2>GURU GOBIND SINGH INDRAPRASTHA UNIVERSITY</h2>
+	   	</div>
+    </div>
+  </div>
+
+<!-- navigation bar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+  	<div class="navbar-header">
+      <a class="navbar-brand" href="#">SeaBuckThornMiSatDB</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Intro</a></li>
+      <li class="active"><a href="#">Blast</a></li>
+      <li><a href="#">Search</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="row">
+  <div class="col-xs-3"></div>
+  <div class="col-xs-6">
+    <div class="jumbotron" style="padding:20px">
+    <h2 style="text-align:center">BLAST: Search Reported SSRs</h2>
+    <P>Choose program to use and database to search:</P>
+    <form class="form-inline">
+      <div class="form-group">
+      <label for="program">Program:</label>
+      <select class="form-control" id="program">
+        <option>-empty-</option>
+      </select>
+      </div>
+      <div class="form-group">
+      <label for="database">Database:</label>
+      <select class="form-control" id="database">
+        <option>-empty-</option>
+      </select>
+      </div>
+      <hr>
+      <div class="form-group form-">
+      <label for="txt">Enter sequence below in FASTA format:</label><br>
+      <textarea class="form-control" rows="5" cols="50" id="txt"></textarea>
+      </div><br>
+      <button type="submit" class="btn btn-default" style="margin:10px">Submit</button>
+    </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

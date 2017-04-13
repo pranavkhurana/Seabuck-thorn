@@ -1,0 +1,63 @@
+div.media-left.media-middle{
+	background-color: rgb(248, 248, 248);
+}
+.beforenav{
+	color:white;
+	text-align: center;
+	background-image: url("../images/sea-buckthorn.jpg");
+	background-size: cover;
+	background-position-y:507px;
+}
+.topic{
+	margin-right: 50px;
+	text-align:right;
+	padding: 5px;
+}
+.transbox{
+	background: rgba(0,0,0, 0.75)
+}
+[class*="col-"]{
+	border:none;
+	background-color: white;
+	padding-top: 0px;
+	padding-bottom:0px;
+}
+.navbar-nav>li>a{
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.nav>li {
+    padding-left:10px;
+}
+.data{
+    border: 1px dotted #ca4342;;
+}
+.bodyhead{
+    color: #ca4342;
+}
+.paddingadd{
+	padding:10px;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 2px;
+    border-top: 0px solid #ddd;
+}
+p{
+	font-size:16px;
+}
+.fontnmargin{
+	margin-top: 8%;
+	font-family:monospace;
+}
+.citation{
+	background-color: rgba(251, 175, 175, 0.1);
+	color: rgb(199, 49, 52);
+}
+.footer {
+    padding: 10px;
+    background-color: #f8f8f8;
+    text-align: start;
+    font-size: small;
+    color: rgba(0, 0, 0, 0.42);
+    font-weight: 700;
+}
