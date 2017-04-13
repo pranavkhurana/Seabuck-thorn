@@ -19,7 +19,7 @@
       <a class="navbar-brand" href="#">SeaBuckThornMiSatDB</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Home</a></li>
       <li><a href="#">Intro</a></li>
       <li><a href="#">Blast</a></li>
       <li><a href="#">Search</a></li>
