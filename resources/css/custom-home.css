@@ -1,3 +1,6 @@
+body{
+	background-image: url("resources/images/background-light.jpg");
+}
 div.media-left.media-middle{
 	background-color: rgb(248, 248, 248);
 }
@@ -30,7 +33,8 @@ div.media-left.media-middle{
     padding-left:10px;
 }
 .data{
-    border: 1px dotted #ca4342;;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.73);
 }
 .bodyhead{
     color: #ca4342;
