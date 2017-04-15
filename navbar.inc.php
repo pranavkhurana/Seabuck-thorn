@@ -23,6 +23,7 @@
       <li><a href="#">Intro</a></li>
       <li><a href="#">Blast</a></li>
       <li><a href="#">Search</a></li>
+      <li><a href="#">Tutorial</a></li>
       <li><a href="#">Contact Us</a></li>
     </ul>
   </div>
