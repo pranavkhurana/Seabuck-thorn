@@ -18,7 +18,8 @@
 <!-- page body container-->
 <div class="container">
 	<div class="row">
-		<div class="col-sm-9 data">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-10 data">
 			<h3 class="bodyhead"><b>SeaBuckThornMiSatDB:</b> <small>A Comprehensive Database of Genic Microsatellite Loci of Seabuckthorn (Hippophae rhamnoides L.)<small>
 			</h3>
 			<p style="text-align:justify">
@@ -26,7 +27,7 @@
 
 			</p>
 		</div>
-		<div class="col-sm-3 fontnmargin">
+		<!-- <div class="col-sm-3 fontnmargin">
 		  <table class="table">
 		    <tbody>
 		      <tr>
@@ -46,7 +47,8 @@
 			
 			<h4></h4>
 			
-		</div>
+		</div> -->
+		<div class="col-xs-1"></div>
 	</div>
 	<!-- end-row -->
 </div>
