@@ -16,13 +16,13 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
   	<div class="navbar-header">
-      <a class="navbar-brand" href="#">SeaBuckThornMiSatDB</a>
+      <a class="navbar-brand" href="index.php">SeaBuckThornMiSatDB</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="#">Home</a></li>
+      <li><a href="index.php">Home</a></li>
       <li><a href="#">Intro</a></li>
       <li><a href="#">Blast</a></li>
-      <li><a href="#">Search</a></li>
+      <li><a href="search.php">Search</a></li>
       <li><a href="#">Tutorial</a></li>
       <li><a href="#">Contact Us</a></li>
     </ul>
