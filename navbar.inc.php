@@ -21,7 +21,7 @@
     <ul class="nav navbar-nav">
       <li><a href="index.php">Home</a></li>
       <li><a href="#">Intro</a></li>
-      <li><a href="#">Blast</a></li>
+      <li><a href="blast.php">Blast</a></li>
       <li><a href="search.php">Search</a></li>
       <li><a href="#">Tutorial</a></li>
       <li><a href="#">Contact Us</a></li>

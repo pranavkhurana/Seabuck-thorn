@@ -10,6 +10,12 @@
   <link rel="stylesheet" type="text/css" href="">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    .data{
+        padding: 15px;
+        border-radius: 10px;
+    }
+  </style>
 </head>
 
 <body>
@@ -20,7 +26,8 @@
   <div class="row">
     <div class="col-sm-3"></div>
     <div class="col-sm-6 data">
-      <form action="search-result.php" method="POST">
+      <form action="search-intermediate.php" method="POST">
+        <input type="hidden" name="pageid" value="1">
         <div class="form-group">
           <label for="rul">Repeat unit length:</label>
           <select  name="SSRtype" class="form-control" id="rul">
@@ -75,31 +82,3 @@
 <hr>
 </body>
 </html>
-<!-- <form action="search-result.php" method="GET">
-Repeat Unit Length
-<select name="SSRtype">
-  <option value="">-choose-</option>
-  <option value='p1'>Mononucleotide</option>
-  <option value='p2'>Dinucleotide</option>
-  <option value='p3'>Trinucleotide</option>
-  <option value='p4'>Tetranucleotide</option>
-  <option value='p5'>Pentanucleotide</option>
-  <option value='p6'>Hexanucleotide</option>
-</select>
-<br>
-Repeat Sequence
-<input type="text" name='SSR'>
-<br>
-Microsatellite Length
-<select name="sizeoption">
-  <option selected value='='>Equal To</option>
-  <option value='<'>Less Than</option>
-  <option value='<='>Less Than Or Equal To</option>
-  <option value='>'>Greater Than</option>
-  <option value='>='>Greater Than Or Equal To</option>
-  <option  value='BETWEEN'>Between</option>
-</select>
-<input type="text" name="size"><br>
-<input type="text" name="size2"><br>
-<input type="submit" value="search">
-</form> -->
