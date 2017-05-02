@@ -25,7 +25,9 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-3"></div>
-    <div class="col-sm-6 data">
+    <div class="col-sm-6">
+        <center><h2>Perform your search here</h2></center>
+        <hr>
       <form action="search-intermediate.php" method="POST">
         <input type="hidden" name="pageid" value="1">
         <div class="form-group">
@@ -66,7 +68,7 @@
           </div>
         </div>
         <hr><hr>
-        <p><small>Fill "at least" one field to perform a valid search</small></p>
+        <p><small>Fill at-least one field to perform a valid search</small></p>
         <div class="form-group"> 
           <div class="col-sm-offset-5 col-sm-10">
             <button type="submit" class="btn btn-default">Submit</button>

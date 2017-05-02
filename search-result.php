@@ -15,25 +15,24 @@ session_start();
 	@$size=$_POST["size"];
 	@$size2=$_POST["size2"];*/
 	$sql=$sql." LIMIT ".(($pageid-1)*25).",25";//add limit for paging
-	$colNameQuery='SELECT `COLUMN_NAME` FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` ="'.$mysql_db.'" AND `TABLE_NAME`="table1"';
+
+	//$colNameQuery='SELECT `COLUMN_NAME` FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` ="'.$mysql_db.'" AND `TABLE_NAME`="table1"';
 	//fetching column names in colNames array
-	if ( $query_run =  mysql_query( $colNameQuery ) ) {
+	/*if ( $query_run =  mysql_query( $colNameQuery ) ) {
 		$i=0;
 	    while ( $query_row=mysql_fetch_assoc ( $query_run ) ) {
 	        $colNames[$i] = $query_row['COLUMN_NAME'];$i++;
 	    }
-	    /*foreach ($colNames as $key) {
-	    	echo $key;
-	    }*/
-	    //echo "<br>";
-	}
-	
-         
+	 }*/
+	//colnames to fetch
+	$colNames=array("ID","SSRnr.","SSRtype","SSR","size","start","end","seqdesc","go","enzymecodes");
+    //colnames to displays
+    $displayColNames=array("UnigeneID","SSRno.","SSRtype","SSR","Size","Start","End","Sequence Description","GO in extended format","Enzyme Codes");     
  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>title</title>
+  <title>Search result</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -63,14 +62,31 @@ session_start();
 
 <body>
 <?php include("navbar.inc.php") ?>
+<?php
+         $retval = mysql_query( $countquery);
+         if(! $retval ) {
+            die('Could not get data: ' . mysql_error());
+         }
+         $row = mysql_fetch_array($retval, MYSQL_NUM );
+         $rec_count = $row[0];
+         //echo $rec_count;
+         
+     ?>
 
 <!-- page body container-->
 <div class="container">
+	<?php if($pageid == floor($rec_count/25+1)){ ?>
+		<p class="result"> <?="(".((($pageid-1)*25)+1)."-".((($pageid-1)*25)+($rec_count%25)).") of ".$rec_count." results"?></p>
+	<?php }
+	else{
+	?>
+		<p  class="result"><?="(".((($pageid-1)*25)+1)."-".((($pageid-1)*25)+25).") of ".$rec_count." results"?></p>
+	<?php	} ?>
 	 <table class="table table-hover table-responsive">
     <thead>
       <tr>
 	 	<?php 
-	 		foreach ($colNames as $key) {
+	 		foreach ($displayColNames as $key) {
 		    	echo "<th>".$key."</th>";
 		    }
 		?>
@@ -96,24 +112,7 @@ session_start();
 		?>
     </tbody>
   </table>
-	<?php
-         $retval = mysql_query( $countquery);
-         if(! $retval ) {
-            die('Could not get data: ' . mysql_error());
-         }
-         $row = mysql_fetch_array($retval, MYSQL_NUM );
-         $rec_count = $row[0];
-         //echo $rec_count;
-         
-         if( isset($_GET{'page'} ) ) {
-            $page = $_GET{'page'} + 1;
-            $offset = $rec_limit * $page ;
-         }else {
-            $page = 0;
-            $offset = 0;
-         }
- 	 ?>
-
+	
 
 
  </div>
@@ -139,5 +138,3 @@ session_start();
 </div>
 </body>
 </html>
-
-
