@@ -25,9 +25,9 @@ session_start();
 	    }
 	 }*/
 	//colnames to fetch
-	$colNames=array("ID","SSRnr.","SSRtype","SSR","size","start","end","seqdesc","go","enzymecodes");
+	$colNames=array("ID","SSRnr.","SSRtype","SSR","size","start","end");
     //colnames to displays
-    $displayColNames=array("UnigeneID","SSRno.","SSRtype","SSR","Size","Start","End","Sequence Description","GO in extended format","Enzyme Codes");     
+    $displayColNames=array("UnigeneID","SSRno.","SSRtype","SSR","Size","Start","End");     
  ?>
 <!DOCTYPE html>
 <html lang="en">
