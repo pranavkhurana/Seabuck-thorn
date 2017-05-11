@@ -26,7 +26,7 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Search
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="search-microsatdb.php">Microsat Db</a></li>
+          <li><a href="search-mdb.php">Microsat Db</a></li>
           <li><a href="search-geneontology.php">Gene Ontology</a></li>
           <li><a href="search-primer.php">Primers</a></li>
         </ul>
