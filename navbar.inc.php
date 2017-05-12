@@ -27,7 +27,7 @@
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="search-mdb.php">Microsat Db</a></li>
-          <li><a href="search-geneontology.php">Gene Ontology</a></li>
+          <li><a href="search-go.php">Gene Ontology</a></li>
           <li><a href="search-primer.php">Primers</a></li>
         </ul>
       </li>
