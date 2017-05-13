@@ -9,8 +9,10 @@ session_start();
 
 	$sql=$sql." LIMIT ".(($pageid-1)*25).",25";//add limit for paging
 
+
+//ADD ALL FIELD NAMES HERE
 	//colnames to fetch
-	$colNames=array("Index", "Seq ID","Orientation");
+	$colNames=array("Index", "SeqID","Orientation");
     //colnames to displays
     $displayColNames=array("Index", "Seq ID","Orientation");     
  ?>
@@ -66,7 +68,7 @@ session_start();
 	else{
 	?>
 		<p  class="result"><?="(".((($pageid-1)*25)+1)."-".((($pageid-1)*25)+25).") of ".$rec_count." results"?></p>
-	<?php	} ?>
+		<?php	} ?>
 	 <table class="table table-hover table-responsive">
     <thead>
       <tr>
