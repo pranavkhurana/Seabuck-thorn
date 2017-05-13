@@ -4,8 +4,8 @@
 	@$pageid=$_POST["pageid"];
 	@$unigeneid=$_POST["unigeneid"];
 	if(empty($unigeneid)) die("Input a valid Unigene id.");
-	$sql='SELECT * from `table4` WHERE "Seq ID" = '.$unigeneid;
+	$sql='SELECT * from `table4` WHERE `SeqID` = "'.$unigeneid.'"';
 	$_SESSION["query"]=$sql;
-	$_SESSION["countquery"]='SELECT count(seqid) from `table4` WHERE "Seq ID" = '.$unigeneid;
+	$_SESSION["countquery"]= 'SELECT count(SeqID) from table4 WHERE SeqID = "'.$unigeneid.'"';
 	header("Location: search-primer-result.php");
  ?>
