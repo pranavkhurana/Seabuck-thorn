@@ -51,13 +51,17 @@ if ($handle) {
   }
   fclose($handle);
 }*/
-/*$program=$_POST["program"];
+
+$program=$_POST["program"];
 $database=$_POST["database"];
 $query=$_POST["query"];
-*/
+
+
 // Build the request
-$data = array('CMD' => 'Put', 'PROGRAM' => 'blastp', 'DATABASE' => 'pdb', 'QUERY' => 'SSWWAHVEMGPPDPILGVTEAYKRDTNSKK');
+
+//$data = array('CMD' => 'Put', 'PROGRAM' => 'blastp', 'DATABASE' => 'pdb', 'QUERY' => 'SSWWAHVEMGPPDPILGVTEAYKRDTNSKK');
 //$data = array('CMD' => 'Put', 'PROGRAM' => $program, 'DATABASE' => $database, 'QUERY' => $query);
+$data = array('CMD' => 'Put', 'PROGRAM' => 'blastn', 'DATABASE' => 'nr', 'QUERY' => $query);
 $options = array(
   'http' => array(
     'header'  => "Content-type: application/x-www-form-urlencoded\r\n",

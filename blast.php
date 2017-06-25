@@ -12,38 +12,38 @@
   <script>
    	$(function(){
 	  $("form").submit(function(){
-	    $(this).after("<img style='background-color:rgba(255, 255, 255, 0.88);position:fixed;left:0px;top:0px;width:100%;height:100%;z-index:9999' src='resources/images/pageLoader.gif' alt='loading' />").fadeIn();  
+	    $(this).after("<img style='background-color:rgba(255, 255, 255, 0.88);position:fixed;left:0px;top:0px;width:100%;height:100%;z-index:9999' src='resources/images/pageLoader.gif' alt='loading' />").fadeIn();
 	  });
 	});
   </script>
   <script>
-	var request;  
+	var request;
 	function showDatabases(program){
 
-		var url="database-names.php?program="+program;  
-		if(window.XMLHttpRequest){  
-			request=new XMLHttpRequest();  
-		}  
-		else if(window.ActiveXObject){  
-			request=new ActiveXObject("Microsoft.XMLHTTP");  
+		var url="database-names.php?program="+program;
+		if(window.XMLHttpRequest){
+			request=new XMLHttpRequest();
+		}
+		else if(window.ActiveXObject){
+			request=new ActiveXObject("Microsoft.XMLHTTP");
 		}
 		try{
-			request.onreadystatechange=getInfo;  
-			request.open("GET",url,true);  
-			request.send();  
-		}catch(e){alert("Unable to connect to server");}  
+			request.onreadystatechange=getInfo;
+			request.open("GET",url,true);
+			request.send();
+		}catch(e){alert("Unable to connect to server");}
 	}
 
-	function getInfo(){  
-		if(request.readyState==4){  
+	function getInfo(){
+		if(request.readyState==4){
 			var val=request.responseText;
-			document.getElementById('program').innerHTML=val;  
-		}  
+			document.getElementById('program').innerHTML=val;
+		}
 	}
 
-</script>  
+</script>
 </head>
- 
+
 <body>
 <?php include("navbar.inc.php") ?>
 <!-- page body container-->
@@ -52,16 +52,13 @@
     <div class="col-sm-2"></div>
     <div class="col-sm-8" id="program" >
     	<center><h2>Choose Program</h2></center>
-    	<button onclick="showDatabases('blastp')">Blastp</button><br>
-    	<button onclick="showDatabases('blastn')">Blastn</button><br>
-    	<button onclick="showDatabases('blastx')">Blastx</button><br>
-    	<button onclick="showDatabases('tblastn')">TBlastn</button>
+
     </div>
     <div class="col-sm-2"></div>
     <div class="col-sm-1"></div>
   </div>
   <!-- end-row -->
 </div>
-<!-- end container -->  
+<!-- end container -->
 </body>
 </html>
