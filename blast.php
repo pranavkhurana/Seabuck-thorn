@@ -53,7 +53,7 @@
   <?php include("navbar.inc.php") ?>
   <!-- page body container-->
   <div class="container">
-    <center><h2>Perform a BLAST search here</h2></center>
+    <center style="text-decoration:underline;"><h2>Perform a BLAST search here</h2></center>
     <div class="row">
       <div class="col-sm-6 col-sm-offset-3" id="program" >
 
