@@ -25,9 +25,9 @@ session_start();
 	    }
 	 }*/
 	//colnames to fetch
-	$colNames=array("ID","SSRnr.","SSRtype","SSR","size","start","end");
+	$colNames=array("ID","SSRnr.","SSR","size","start","end");
     //colnames to displays
-    $displayColNames=array("UnigeneID","SSRno.","SSRtype","SSR","Size","Start","End");     
+    $displayColNames=array("UnigeneID","No. of SSR","SSR Motif","Size(bp)","Start","End");     
  ?>
 <!DOCTYPE html>
 <html lang="en">

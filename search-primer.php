@@ -26,13 +26,13 @@
   <div class="row">
     <div class="col-sm-3"></div>
     <div class="col-sm-6">
-        <center><h2>Perform your Primer search here</h2></center>
+        <center><h2>Primer search </h2></center>
         <hr>
       <form action="search-primer-intermediate.php" method="POST">
         <input type="hidden" name="pageid" value="1" >
         <div class="form-group">
-          <label for="go">Enter Unigene Id to search for its Primers</label>
-          <input type="text"  name="unigeneid" class="form-control" id="unigeneid" required="required" placeholder="e.g. 61">
+          <label for="go">Search Primers for amplification of SSR loci </label>
+          <input type="text"  name="unigeneid" class="form-control" id="unigeneid" required="required" placeholder="Enter UnigeneId e.g. Unigene61">
          </div>
         <hr>
         <div class="form-group"> 
