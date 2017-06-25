@@ -12,7 +12,7 @@ session_start();
 	//colnames to fetch
 	$colNames=array("seqid","seqdesc","go","enzymecodes");
     //colnames to displays
-    $displayColNames=array("Sequence Id","Sequence Description","Gene Ontology", "Enzyme Codes");     
+    $displayColNames=array("UnigeneID","Sequence Description","Gene Ontology", "Enzyme Code");     
  ?>
 <!DOCTYPE html>
 <html lang="en">
