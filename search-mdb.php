@@ -40,6 +40,8 @@
             <option value='p4'>Tetranucleotide</option>
             <option value='p5'>Pentanucleotide</option>
             <option value='p6'>Hexanucleotide</option>
+            <option value='c'>Compound Perfect</option>
+            <option value='c*'>Compound Imperfect</option>
           </select>
         </div>
         <div class="form-group">

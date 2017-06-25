@@ -12,9 +12,9 @@ session_start();
 
 //ADD ALL FIELD NAMES HERE
 	//colnames to fetch
-	$colNames=array("Index", "SeqID","Orientation");
+	$colNames=array("Index", "SeqID","Orientation","Seq","Start","Len","tm","GC%","Any compl","3' compl", "Orientation2","Seq2","Start2","Len2","tm2","GC%2","Any compl2","3' compl2","Prod size","Pair any compl","Pair 3' compl","Motif","Motif Len");
     //colnames to displays
-    $displayColNames=array("Index", "Seq ID","Orientation");     
+    $displayColNames=array("Primer Pair", "UnigeneID","Orientation","Sequence","Start","Length (bp)","Tm (°C)","GC%","Any compl","3' compl", "Orientation","Sequence","Start","Length (bp)","Tm (°C)","GC%","Any compl","3' compl","Product size","Pair any compl","Pair 3'compl","Motif","Motif Length");     
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,7 +69,8 @@ session_start();
 	?>
 		<p  class="result"><?="(".((($pageid-1)*25)+1)."-".((($pageid-1)*25)+25).") of ".$rec_count." results"?></p>
 		<?php	} ?>
-	 <table class="table table-hover table-responsive">
+	 <table class=" table table-hover table-responsive">
+
     <thead>
       <tr>
 	 	<?php 
@@ -109,7 +110,7 @@ session_start();
 <div class="container-fluid pagination-container">
 	<?php 
 	function pageidform($page,$disp){
-		echo "<div class='pagination-form'><form action='search-go-result.php' method='post'>";
+		echo "<div class='pagination-form'><form action='search-primer-result.php' method='post'>";
 		echo "<input type='hidden' name='pageid' value=".$page.">";
 		echo "<input class='submit-pagination-button' type='submit' value='".$disp."'>";
 		echo "</form>";
