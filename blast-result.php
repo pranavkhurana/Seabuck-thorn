@@ -16,7 +16,7 @@
 <?php
 // Read and encode the queries from file
 $encoded_query = '';
-$handle = fopen($_FILES["query_path"]["tmp_name"], 'r');
+@$handle = fopen($_FILES["query_path"]["tmp_name"], 'r');
 if ($handle) {
   while (($line = fgets($handle)) !== false) {
     $encoded_query .= urlencode($line);
