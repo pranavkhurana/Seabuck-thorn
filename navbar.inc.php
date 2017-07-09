@@ -31,7 +31,7 @@
           <li><a href="search-unigene.php">Unigene Sequence</a></li>
         </ul>
       </li>
-      <li><a href="tutorial.php">Tutorial</a></li>
+      <li><a href="#">Tutorial</a></li>
       <li><a href="contact.php">Contact Us</a></li>
     </ul>
   </div>
