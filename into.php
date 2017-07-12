@@ -21,7 +21,7 @@
 
 <body>
 <?php include("navbar.inc.php") ?>
-
+<center><h2>Intro goes here</h2></center>
 <!-- page body container-->
     <!-- container end-->
 </body>

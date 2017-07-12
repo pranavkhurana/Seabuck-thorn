@@ -4,11 +4,11 @@
       <img src="resources/images/ggsipu-logo.png" class="media-object" style="width:150px">
     </div>
     <div class="media-body beforenav">
-      <div class="transbox">
-        <h3 class="topic">SBTMicroSatdb</h3>
-      <h3>University School of Biotechnology</h3>
-      <h2>GURU GOBIND SINGH INDRAPRASTHA UNIVERSITY</h2>
-      </div>
+    	<div class="transbox">
+   			<h3 class="topic">SeabuckthornMisatDb</h3>
+			<h3>University School of Biotechnology</h3>
+			<h2>GURU GOBIND SINGH INDRAPRASTHA UNIVERSITY</h2>
+	   	</div>
     </div>
   </div>
 

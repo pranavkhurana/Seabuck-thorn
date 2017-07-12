@@ -28,14 +28,14 @@
     <div class="col-sm-6">
         <center><h2>Unigene sequence </h2></center>
         <hr>
-      <form action="search-unigene-intermediate.php" method="POST">
-        <input type="hidden" name="pageid" value="1" >
+      <form action="search-unigene-result.php" method="POST">
+        <!--<input type="hidden" name="pageid" value="1" >-->
         <div class="form-group">
-          <label for="go">Sequence search </label>
+          <label for="unigeneid">Sequence search </label>
           <input type="text"  name="unigeneid" class="form-control" id="unigeneid" required="required" placeholder="Enter UnigeneId e.g. Unigene61">
          </div>
         <hr>
-        <div class="form-group"> 
+        <div class="form-group">
           <div class="col-sm-offset-5 col-sm-10">
             <button type="submit" class="btn btn-default">Submit</button>
           </div>
