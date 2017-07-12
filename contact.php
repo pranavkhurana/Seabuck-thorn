@@ -23,21 +23,43 @@
 <?php include("navbar.inc.php") ?>
 
 <!-- page body container-->
-<p>
-<center><h4><b>For further enquiries please contact:</h4> 
+<center><h4><b>For further enquiries please contact:</h4></center>
+<p style="text-align:center">
+<br>Ankit Jain<br/>
+Center for Excellence in Genomics <br/>
+International Crops Research Institute 
+for the Semi-Arid Tropics(ICRISAT)<br/>
+Patancheru-502324<br/>
+Hyderabad<br/>
+India<br/>
+-502324   <br/>                                                                   
+Phone : +91-9704531735,9868736110<br/>
+Email-id   : <a href="#"> mail.ankitjain83@gmail.com</a>
+</p>
 
+<p style="text-align:center">
 <br>Prof. P.C. Sharma<br/>
 University School of Biotechnology<br/>
 Guru Gobind Singh Indraprastha University<br/>
-Dwarka sector-16c<br/>
-New delhi<br/>
-110078    <br/>                                                                   
+Dwarka Sector-16C<br/>
+New Delhi<br/>
+-110078    <br/>                                                                   
 Phone : +91-11-25302306<br/>
 
 Email-id   : <a href="#"> prof.pcsharma@gmail.com</a> 
-</b></center>
+</p>
+<p style="text-align:center">
+<left>
+<br>Surbhi Agarwal<br/>
+University School of Biotechnology<br/>
+Guru Gobind Singh Indraprastha University<br/>
+Dwarka Sector-16C<br/>
+New Delhi<br/>
+-110078    <br/></left>                                                                
+
+Email-id   : <a href="#"> surbhiagarwal965@gmail.com</a> 
+</b>
 </p>
 </body>
 </html>
-
 

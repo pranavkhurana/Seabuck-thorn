@@ -32,6 +32,12 @@
       <form action="search-go-intermediate.php" method="POST">
         <input type="hidden" name="pageid" value="1">
         <div class="form-group">
+                  <label for="go">Unigene ID</label>
+            <input type="text"  name="unigeneid" class="form-control" id="unigeneid" required="required" placeholder="Enter UnigeneId e.g. Unigene61">
+            <div class="form-group"> 
+          <div class="col-sm-offset-5 col-sm-10">
+            <button type="submit" class="btn btn-default">Submit</button>
+          </div>
           <label for="go">Gene ontology</label>
           <select  name="go" class="form-control" id="go" required="required">
             <option value="">-choose-</option>
@@ -39,13 +45,15 @@
             <option value='F GO'>Molecular Function</option>
             <option value='P GO'>Biological Process</option>
           </select>
-        </div>
-        <hr>
-        <p><small>Choose from the given Gene Ontologies to perform a valid search.</small></p>
-        <div class="form-group"> 
+          <div class="form-group"> 
           <div class="col-sm-offset-5 col-sm-10">
             <button type="submit" class="btn btn-default">Submit</button>
           </div>
+        </div>
+        <hr>
+        <br>
+        <p align="center"><small>Fill at-least one field to perform a valid search</small></p>
+        
         </div>
       </form>
       <hr><hr>
