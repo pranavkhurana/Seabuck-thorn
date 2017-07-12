@@ -14,50 +14,24 @@
 
 <body>
 <?php
-# $ID: blastphp.php, v 1.0 2017/02/21 21:02:21 Ashok Kumar T. $
-#
-# ===========================================================================
-#
-# This code is for example purposes only.
-#
-# Please refer to https://ncbi.github.io/blast-cloud/dev/api.html
-# for a complete list of allowed parameters.
-#
-# Please do not submit or retrieve more than one request every two seconds.
-#
-# Results will be kept at NCBI for 24 hours. For best batch performance,
-# we recommend that you submit requests after 2000 EST (0100 GMT) and
-# retrieve results before 0500 EST (1000 GMT).
-#
-# ===========================================================================
-#
-# return codes:
-#     0 - success
-#     1 - invalid arguments
-#     2 - no hits found
-#     3 - rid expired
-#     4 - search failed
-#     5 - unknown error
-#
-# ===========================================================================
-/*// Path of the query sequence (modify)
-$query = "C:\\Users\\ashok\\Desktop\\BLASTphp\\protein.fas";
-// Read and encode the queries
+// Read and encode the queries from file
 $encoded_query = '';
-$handle = fopen($query, "r");
+@$handle = fopen($_FILES["query_path"]["tmp_name"], 'r');
 if ($handle) {
   while (($line = fgets($handle)) !== false) {
     $encoded_query .= urlencode($line);
   }
   fclose($handle);
-}*/
-/*$program=$_POST["program"];
-$database=$_POST["database"];
-$query=$_POST["query"];
-*/
+}
+if($encoded_query=='')
+  $query=$_POST["query"];
+else $query=$encoded_query;
 // Build the request
-$data = array('CMD' => 'Put', 'PROGRAM' => 'blastp', 'DATABASE' => 'pdb', 'QUERY' => 'SSWWAHVEMGPPDPILGVTEAYKRDTNSKK');
+
+//$data = array('CMD' => 'Put', 'PROGRAM' => 'blastp', 'DATABASE' => 'pdb', 'QUERY' => 'SSWWAHVEMGPPDPILGVTEAYKRDTNSKK');
 //$data = array('CMD' => 'Put', 'PROGRAM' => $program, 'DATABASE' => $database, 'QUERY' => $query);
+
+$data = array('CMD' => 'Put', 'PROGRAM' => 'blastn', 'DATABASE' => 'nr', 'QUERY' => $query);
 $options = array(
   'http' => array(
     'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
