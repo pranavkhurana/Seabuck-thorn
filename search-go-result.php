@@ -12,7 +12,7 @@ session_start();
 	//colnames to fetch
 	$colNames=array("seqid","seqdesc","go","enzymecodes");
     //colnames to displays
-    $displayColNames=array("UnigeneID","Sequence Description","Gene Ontology", "Enzyme Code");     
+    $displayColNames=array("UnigeneID","Sequence Description","Gene Ontology", "Enzyme Code");
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +30,7 @@ session_start();
   	.pagination-container{
   		margin-left: 40%;
   		margin-bottom: 20px;
-  		
+
    	}
   	.pagination-form{
   	}
@@ -55,11 +55,11 @@ session_start();
          $row = mysql_fetch_array($retval, MYSQL_NUM );
          $rec_count = $row[0];
          //echo $rec_count;
-         
+
      ?>
 
 <!-- page body container-->
-<div class="container">
+<div class="container-fluid">
 	<?php if($pageid == floor($rec_count/25+1)){ ?>
 		<p class="result"> <?="(".((($pageid-1)*25)+1)."-".((($pageid-1)*25)+($rec_count%25)).") of ".$rec_count." results"?></p>
 	<?php }
@@ -70,7 +70,7 @@ session_start();
 	 <table class="table table-hover table-responsive">
     <thead>
       <tr>
-	 	<?php 
+	 	<?php
 	 		foreach ($displayColNames as $key) {
 		    	echo "<th>".$key."</th>";
 		    }
@@ -97,7 +97,7 @@ session_start();
 		?>
     </tbody>
   </table>
-	
+
 
 
  </div>
@@ -105,7 +105,7 @@ session_start();
 <hr>
 
 <div class="container-fluid pagination-container">
-	<?php 
+	<?php
 	function pageidform($page,$disp){
 		echo "<div class='pagination-form'><form action='search-go-result.php' method='post'>";
 		echo "<input type='hidden' name='pageid' value=".$page.">";
